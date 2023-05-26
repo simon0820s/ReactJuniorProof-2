@@ -1,17 +1,16 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
 const MoviesList = ({movies}) => {
   return (
-    <div>
-      <ul>
+      <ul className="movies">
         {movies.map((movie) => (
-          <li key={movie.id}>
+          <li className="movie" key={movie.id}>
             <h3>{movie.title}</h3>
             <p>{movie.year}</p>
             <img src={movie.poster} alt={"movie of: " + movie.Poster} />
           </li>
         ))}
       </ul>
-    </div>
   );
 };
 
