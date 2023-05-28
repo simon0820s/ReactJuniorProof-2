@@ -43,3 +43,9 @@
 .movie h3{
     font-weight: bold;
 }
+.notFound{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+}

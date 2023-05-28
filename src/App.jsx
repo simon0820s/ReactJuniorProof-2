@@ -5,14 +5,12 @@ import { Movies } from "./components/Movies";
 import "./App.css";
 
 function App() {
-  const { movies } = useMovies();
   const { search, updateSearch, error } = useSearch();
+  const { movies, getMovies } = useMovies({search});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new window.FormData(event.target);
-    const inputQuery = data.get("inputQuery");
-    console.log(inputQuery);
+    getMovies()
   };
 
   const handleSearch = (event) => {

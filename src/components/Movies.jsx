@@ -13,13 +13,9 @@ const MoviesList = ({movies}) => {
       </ul>
   );
 };
-
-const MoviesNotFound = () => {
-  <p>Movies not found</p>;
-};
-
 // eslint-disable-next-line react/prop-types
 export const Movies = ({movies}) => {
-  const hasmovies = movies?.length > 0;
-  return hasmovies ? <MoviesList movies={movies} /> : <MoviesNotFound />;
+  console.log(movies)
+  const hasmovies = movies;
+  return hasmovies ? <MoviesList movies={movies} /> : <p className="notFound">Movies Not Found</p>;
 };
